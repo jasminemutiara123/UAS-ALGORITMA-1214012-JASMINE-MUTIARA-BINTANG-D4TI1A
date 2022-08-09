@@ -1,0 +1,2 @@
+# UAS-ALGORITMA-1214012-JASMINE-MUTIARA-BINTANG-D4TI1A
+   public void act()     {         // Add your action code here.         keycontrol();     }    public void keycontrol()     {     if(Greenfoot.isKeyDown("d"))         {             move(5);         }                  if(Greenfoot.isKeyDown("a"))         {             move(-5);         }                  if(Greenfoot.isKeyDown("s"))         {             setLocation(getX(),getY()+5);         }                  if(Greenfoot.isKeyDown("w"))         {             setLocation(getX(),getY()-5);         }     } }
