@@ -85,4 +85,23 @@ Id disini adalah untuk nomor dari baris dimana dibuat INT karena berupa angka, k
 8.	Klik go
 
 Untuk ID disi dengan angka nomor misalkan nomor 1, 2, 3 kemudian kolom Kunci disi dengan huruf w,a,s, atau d. 
-Selanjutnya mengkoneksikannya ke database, caranya buat sebuah kelas pada 
+Selanjutnya mengkoneksikannya ke database, caranya buat sebuah kelas pada database:
+public class koneksi{
+    private static Connection koneksi;
+    public static Connection getKoneksi(){
+        if(koneksi == null){
+            try{
+                String url="mysql://localhost:3306/uas";
+                String user="root";
+                String password="";
+                DriverManager.registerDriver(
+                new com.mysql.jdbc.Driver());
+                koneksi = DriverManager.getConnection(url,user,password);
+                }catch (SQLException t){
+                    System.out.println("ERROR MEMBUAT KONEKSI");
+            }
+        }
+        return koneksi;
+    }
+}
+
