@@ -1,8 +1,9 @@
 # UAS-ALGORITMA-1214012-JASMINE-MUTIARA-BINTANG-D4TI1A
-   Nama                     : Jasmine Mutiara Bintang 
+Nama                     : Jasmine Mutiara Bintang 
 Kelas                      : 1A/ D4 Teknik Informatika 
 NPM                      : 1214012 
 Dosen Pengampu : Mohamad Nurkamal Fauzan 
+
 
 Kode Program:
    public void act()
@@ -86,6 +87,7 @@ Id disini adalah untuk nomor dari baris dimana dibuat INT karena berupa angka, k
 
 Untuk ID disi dengan angka nomor misalkan nomor 1, 2, 3 kemudian kolom Kunci disi dengan huruf w,a,s, atau d. 
 Selanjutnya mengkoneksikannya ke database, caranya buat sebuah kelas pada database:
+
 public class koneksi{
     private static Connection koneksi;
     public static Connection getKoneksi(){
@@ -100,8 +102,9 @@ public class koneksi{
                 }catch (SQLException t){
                     System.out.println("ERROR MEMBUAT KONEKSI");
             }
-        }
+        }h
         return koneksi;
     }
 }
-
+Penjelasan:
+Setelah membuat class koneksi, maka selanjutnya memanggil database menggunakan script getKoneksi. Setelah itu terdapat sebuah program if else dimana apabila benar maka koneksi berhasil terhubung ke database. Disini terdapat perintah untuk memanggil database yaitu string url, string user, dan string password. String url yang dimaksud ialah url dari database disini saya membuat nama database yakni uas. Selanjutnya fungsi driver manager disini adalah sebagai terminal jembatan untuk mermenghubungkan ke databasenya.  Apabila salah maka fungsi catch disini untuk menampung kesalahannya dan pesan teks nya yaitu "error membuat koneksi"
